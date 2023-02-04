@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Fortnite";
+  src: local("Fortnite"), url(./assets/fonts/fortnite.otf) format("opentype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #00ddff;
+  background: url("./assets/lobby_background.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Fortnite";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ul {
+  list-style: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 1em;
+  margin: 0 1em;
+}
+
+.navbar__options ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+  font-size: larger;
+  padding: 1em;
+}
+
+.navbar__options ul li {
+  transition: transform 0.1s ease-in;
+  margin: 0 0.5em;
+}
+
+.navbar__options ul li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.navbar__option_selected {
+  background-color: white;
+  color: #191943;
+  padding: 0.5em;
+  cursor: pointer;
+  transform: skew(1deg, 1deg, 0.5deg, -0.5deg);
+}
+
+.navbar__options ul li {
+  letter-spacing: 1px;
+}
+
+/* Left Sidebar */
+
+.leftSideBar {
+  width: 30vw;
+  height: calc(80vh - 150px);
+  position: absolute;
+  left: 0;
+  padding: 3em 0;
+}
+
+.leftSideBar ul li {
+  margin: 0.8em 0;
+}
+
+.leftSideBar__content ul li:first-child {
+  font-size: 24px;
+  color: #89ebfa;
+  margin-bottom: 0;
+  letter-spacing: 1.5px;
+}
+.leftSideBar__content ul li:nth-child(2) {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.leftSideBar__content ul li:nth-child(3) {
+  margin-top: 0;
+}
+
+.leftSideBar__content ul li:nth-child(5),
+.leftSideBar__content ul li:nth-child(6),
+.leftSideBar__content ul li:nth-child(7) {
+  margin: 0;
+  margin-bottom: .5em;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Fortnite';
+  letter-spacing: 1.5px;
+}
+
+.leftSideBar__content ul li:nth-child(6),
+.leftSideBar__content ul li:nth-child(7) {
+  font-size: 15px;
+  color: #89ebfa;
+  letter-spacing: 1px;
+}
+
+/* Left Sidebar */
+
+/* Right Sidebar */
+
+.rightSidebar {
+  position: absolute;
+  width: 350px;
+  height: calc(80vh - 150px);
+  right: 0;
+  padding: 3em 0;
+}
+
+.black-overlay {
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(2, 0, 36, 0.1);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0) 35%);
+}
+
+.rightSidebar__content ul li:first-child {
+  position: absolute;
+  top: 0;
+  right: 2em;
+  font-size: 15px;
+  padding: .3em .5em ;
+  background-color: #0077d6;
+  border: 3px solid white;
+  transform: skew(-5deg, -1deg);
+}
+
+.carrousel,
+.gamemode {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: #2700d6;
+  background: url("./assets/tropicalthunder.jpg") no-repeat;
+  background-size: cover;
+  border: 4px solid #2700d6;
+  width: 256px;
+  height: 134px;
+  position: relative;
+}
+.gamemode-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.gamemode {
+  margin: 0;
+  background-color: #17a1d6;
+  background: url("./assets/zeroconstruction.jpg") no-repeat;
+  background-size: cover;
+  border: 4px solid #0077d6;
+  position: relative;
+}
+
+.text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  height: 35px;
+  width: 280px;
+  background-color: #0077d6;
+  color: #ccfeff;
+}
+
+.overlay {
+  background-color: #0076d6bf;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.active-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 100%;
+  gap: .3em;
+}
+
+.text-inside-overlay {
+  position: absolute;
+  left: 30%;
+  bottom: 1em;
+  letter-spacing: 1px;
+}
+
+.active-line {
+  height: 5px;
+  width: 50px;
+  background-color: rgba(240, 248, 255, 0.551);
+}
+.active-container .active-line:first-child {
+  background-color: white !important;
+}
+
+/* Right Sidebar */
+
+.btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-blue {
+  cursor: pointer;
+  background-color: #0077d6;
+  border: none;
+  color: #ccfeff;
+  font-family: "Fortnite";
+  font-size: 20px;
+  padding: 0.3em 0.6em;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.btn-cta {
+  transition: transform 0.2s ease-in-out;
+  max-width: 280px;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease;
+}
+
+.module-border-wrap {
+  background: linear-gradient(to right, #17a1d6, rgb(74, 96, 233));
+  padding: 4px;
+}
+
+.btn-yellow {
+  margin: 0.3em 0;
+  cursor: pointer;
+  background-color: yellow;
+  border: none;
+  color: black;
+  font-family: "Fortnite";
+  font-size: 35px;
+  padding: 0.2em 0.6em;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.text-cyan {
+  color: #00ddff;
 }
