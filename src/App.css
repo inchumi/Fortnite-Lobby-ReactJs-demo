@@ -10,7 +10,7 @@ body {
   background-color: #00ddff;
   background: url("./assets/lobby_background.png") no-repeat center center fixed;
   background-size: cover;
-  font-family: "Fortnite";
+  font-family: "Fortnite" !important;
 }
 
 header {
@@ -103,10 +103,10 @@ main {
 .leftSideBar__content ul li:nth-child(6),
 .leftSideBar__content ul li:nth-child(7) {
   margin: 0;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Fortnite';
+  font-family: "Fortnite" !important;
   letter-spacing: 1.5px;
 }
 
@@ -144,7 +144,7 @@ main {
   top: 0;
   right: 2em;
   font-size: 15px;
-  padding: .3em .5em ;
+  padding: 0.3em 0.5em;
   background-color: #0077d6;
   border: 3px solid white;
   transform: skew(-5deg, -1deg);
@@ -211,7 +211,7 @@ main {
   align-items: center;
   height: 20px;
   width: 100%;
-  gap: .3em;
+  gap: 0.3em;
 }
 
 .text-inside-overlay {
@@ -244,7 +244,7 @@ main {
   background-color: #0077d6;
   border: none;
   color: #ccfeff;
-  font-family: "Fortnite";
+  font-family: "Fortnite" !important;
   font-size: 20px;
   padding: 0.3em 0.6em;
   width: 100%;
@@ -272,7 +272,7 @@ main {
   background-color: yellow;
   border: none;
   color: black;
-  font-family: "Fortnite";
+  font-family: "Fortnite" !important;
   font-size: 35px;
   padding: 0.2em 0.6em;
   width: 100%;
