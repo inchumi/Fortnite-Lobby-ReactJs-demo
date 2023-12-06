@@ -1,6 +1,6 @@
 # Live Demo 👇
 
-https://fortnite-reacjs-demo.onrender.comhttps://fortnite-reacjs-demo.onrender.com
+https://fortnite-reacjs-demo.onrender.com
 
 # Getting Started with Create React App
 
